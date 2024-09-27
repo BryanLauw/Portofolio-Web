@@ -63,23 +63,11 @@ nav a {
     padding-bottom: 2px;
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
 nav a:hover {
-    font-style: italic;
+    font-weight: bold;
+    color: black;
+    transition: .3s;
+    animation: ease-in;
 }
 
 .jumbotron {
@@ -131,7 +119,7 @@ nav a:hover {
 #proyek section {
     background-color: #4b4b4b;
     padding: 1rem;
-    margin: .5rem 2rem 2rem 1rem;
+    margin: .5rem;
     border-radius: 10px;
     width: 300px;
     height: 250px;
@@ -152,7 +140,7 @@ nav a:hover {
     color: white;
     bottom: 50px;
     width: 125px;
-    left: 112.5px;
+    left: 87.5px;
 }
 
 #proyek div section #git:hover {
@@ -167,7 +155,7 @@ nav a:hover {
     padding: 10px;
     bottom: 20px;
     left: 75px;
-    width: 200px;
+    width: 150px;
     color: #4b4b4b;
     background-color: white;
     text-decoration: none;
@@ -263,10 +251,5 @@ footer h3 {
 
     .jumbotron img {
         margin: 0;
-    }
-
-    #proyek div {
-        flex-flow: column;
-        flex-wrap: wrap;
     }
 }
