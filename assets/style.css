@@ -1,0 +1,273 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    /* display: flex; */
+    gap: 1.5rem;
+}
+
+h2, h3 {
+    color: #6a6974;
+}
+
+#content h2 {
+    text-align: center;
+}
+
+#content h3 {
+    text-align: center;
+}
+
+header {
+    display: inline;
+}
+
+nav {
+    background-color: #949596;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav ul {
+    padding-inline: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav a {
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    font-style: italic;
+}
+
+.jumbotron {
+    font-size: 20px;
+    height: 100vh;
+    background-color: #4b4b4b;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.card {
+    box-shadow: 5px 6px 8px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#organisasi h3 {
+    text-align: left;
+}
+
+#proyek div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+#proyek div section p {
+    text-align: center;
+    color: white;
+}
+
+#proyek section {
+    border: solid 0.2px rgb(193, 223, 223);
+    background-color: #4b4b4b;
+    padding: 1rem;
+    margin: .5rem 2rem 2rem 1rem;
+    border-radius: 10px;
+    width: 350px;
+    height: 250px;
+    position: relative;
+    z-index: 0;
+}
+
+#proyek div section h3 {
+    margin-top: 0;
+    color: white;
+}
+
+#proyek div section #git {
+    font-size: 100px;
+    background-color: #4b4b4b;
+    border: 0;
+    padding: 0;
+    color: white;
+    bottom: 50px;
+    width: 125px;
+    left: 112.5px;
+}
+
+#proyek div section #git:hover {
+    color: black;
+    animation: ease-in-out;
+    transition: 0.3s;
+}
+
+#proyek div section a {
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    bottom: 20px;
+    left: 75px;
+    width: 200px;
+    color: #4b4b4b;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#proyek div section a:hover {
+    background-color: #4b4b4b;
+    color: white;
+    animation: ease-in-out;
+    transition: 0.3s;
+}
+
+.featured-image {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.profile img {
+    width: 200px;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #4b4b4b;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer h3 {
+    color: white;
+}
+
+.social-media {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+.social-media a:hover {
+    color: black;
+    animation: ease-in-out;
+    transition: 0.5s;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    .jumbotron {
+        flex-direction: column;
+    }
+
+    .jumbotron img {
+        margin: 0;
+    }
+
+    #proyek div {
+        flex-flow: column;
+        flex-wrap: wrap;
+    }
+}
